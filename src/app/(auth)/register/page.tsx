@@ -40,8 +40,8 @@ export default function RegisterPage() {
       return
     }
 
-    toast.success('Conta criada! Verifique seu e-mail.')
-    router.push('/verificar-email')
+    toast.success('Conta criada com sucesso!')
+    router.push('/login')
   }
 
   const inputClass = "w-full rounded-xl border border-zinc-300 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800/50 py-3 pl-11 pr-4 text-[14px] text-zinc-900 dark:text-zinc-50 placeholder-zinc-400 dark:placeholder-zinc-500 outline-none transition-all focus:border-blue-500 focus:bg-white dark:focus:border-blue-500 dark:focus:bg-zinc-800 focus:ring-1 focus:ring-blue-500/20 dark:focus:ring-blue-500/30"
