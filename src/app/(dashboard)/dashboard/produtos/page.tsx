@@ -84,11 +84,11 @@ export default async function ProdutosPage({
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">Produtos</h1>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+          <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2">
             Gerencie os brinquedos e equipamentos da sua empresa
           </p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <ExportButton type="products" label="Exportar" />
           <Link
             href="/dashboard/produtos/novo"

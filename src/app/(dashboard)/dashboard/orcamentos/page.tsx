@@ -100,7 +100,7 @@ export default async function OrcamentosPage({
             Gerencie seus orçamentos e propostas
           </p>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <ExportButton type="quotes" label="Exportar" />
           <Link href="/dashboard/orcamentos/novo">
             <Button>
@@ -112,7 +112,7 @@ export default async function OrcamentosPage({
       </div>
 
       {/* Status Filters */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-3">
         {[
           { value: 'all', label: 'Todos' },
           { value: 'pending', label: 'Pendentes' },
@@ -169,19 +169,19 @@ export default async function OrcamentosPage({
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-zinc-200 dark:border-zinc-700">
-                    <th className="pb-3 pr-4 text-left font-medium text-zinc-500 dark:text-zinc-400">
+                    <th className="pb-4 pr-4 text-left font-medium text-zinc-500 dark:text-zinc-400">
                       Cliente
                     </th>
-                    <th className="pb-3 pr-4 text-left font-medium text-zinc-500 dark:text-zinc-400">
+                    <th className="pb-4 pr-4 text-left font-medium text-zinc-500 dark:text-zinc-400">
                       Data do Evento
                     </th>
-                    <th className="pb-3 pr-4 text-left font-medium text-zinc-500 dark:text-zinc-400">
+                    <th className="pb-4 pr-4 text-left font-medium text-zinc-500 dark:text-zinc-400">
                       Valor Total
                     </th>
-                    <th className="pb-3 pr-4 text-left font-medium text-zinc-500 dark:text-zinc-400">
+                    <th className="pb-4 pr-4 text-left font-medium text-zinc-500 dark:text-zinc-400">
                       Status
                     </th>
-                    <th className="pb-3 text-right font-medium text-zinc-500 dark:text-zinc-400">
+                    <th className="pb-4 text-right font-medium text-zinc-500 dark:text-zinc-400">
                       Ações
                     </th>
                   </tr>
@@ -191,7 +191,7 @@ export default async function OrcamentosPage({
                     const statusConfig = STATUS_CONFIG[quote.status] || STATUS_CONFIG.pending
                     return (
                       <tr key={quote.id} className="group">
-                        <td className="py-3 pr-4">
+                        <td className="py-4 pr-4">
                           <div className="font-medium text-zinc-900 dark:text-zinc-50">
                             {quote.customer_name}
                           </div>
@@ -201,20 +201,20 @@ export default async function OrcamentosPage({
                             </div>
                           )}
                         </td>
-                        <td className="py-3 pr-4 text-zinc-700 dark:text-zinc-300">
+                        <td className="py-4 pr-4 text-zinc-700 dark:text-zinc-300">
                           {formatDate(quote.event_date)}
                         </td>
-                        <td className="py-3 pr-4 font-medium text-zinc-900 dark:text-zinc-50">
+                        <td className="py-4 pr-4 font-medium text-zinc-900 dark:text-zinc-50">
                           {formatCurrency(quote.total)}
                         </td>
-                        <td className="py-3 pr-4">
+                        <td className="py-4 pr-4">
                           <span
                             className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${statusConfig.classes}`}
                           >
                             {statusConfig.label}
                           </span>
                         </td>
-                        <td className="py-3 text-right">
+                        <td className="py-4 text-right">
                           <Link href={`/dashboard/orcamentos/${quote.id}`}>
                             <Button variant="ghost" size="sm">
                               <Eye className="h-4 w-4" />
