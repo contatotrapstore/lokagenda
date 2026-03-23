@@ -74,28 +74,28 @@ export default async function DashboardPage() {
   const rentals = upcomingRentals ?? []
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
       {/* Welcome */}
       <div>
-        <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
+        <h2 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
           Bem-vindo, {firstName}!
         </h2>
-        <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
           Aqui está um resumo do seu negócio.
         </p>
       </div>
 
       {/* Stats grid */}
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {stats.map((stat) => (
           <Card key={stat.label}>
-            <CardContent className="p-6">
+            <CardContent className="p-5">
               <div className="flex items-center gap-4">
-                <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${stat.color}`}>
-                  <stat.icon className="h-6 w-6" />
+                <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${stat.color}`}>
+                  <stat.icon className="h-5 w-5" />
                 </div>
-                <div>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">{stat.label}</p>
+                <div className="min-w-0">
+                  <p className="truncate text-xs font-medium text-zinc-500 dark:text-zinc-400">{stat.label}</p>
                   <p className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">{stat.value}</p>
                 </div>
               </div>
