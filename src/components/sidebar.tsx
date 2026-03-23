@@ -49,7 +49,7 @@ export function Sidebar({ companyName, companyLogoUrl }: SidebarProps) {
   }
 
   const sidebarContent = (
-    <div className="flex h-full flex-col bg-zinc-900 dark:bg-zinc-950">
+    <div className="flex h-full flex-col bg-zinc-900">
       {/* LokAgenda branding */}
       <div className="flex h-16 items-center gap-3 border-b border-zinc-800 px-5">
         <Image
